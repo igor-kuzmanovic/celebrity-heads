@@ -135,7 +135,7 @@ function App() {
   return (
     <div className="app">
       <div className="controls">
-        <label className="control">
+        <label className="control control--wide">
           <span className="control-label">TMDB API key</span>
           <input
             type="text"

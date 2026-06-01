@@ -42,6 +42,11 @@ body {
   width: 150px;
 }
 
+.control--wide {
+  width: 300px;
+  min-width: 300px;
+}
+
 .control input,
 .control select,
 .control button {
@@ -165,5 +170,24 @@ button:focus-visible {
 
   @page {
     size: A4 portrait;
+  }
+}
+
+@media (max-width: 900px) {
+  .controls {
+    align-items: stretch;
+  }
+
+  .control,
+  .control--wide,
+  .toggle,
+  .buttons {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .toggle-buttons,
+  .buttons {
+    width: 100%;
   }
 }

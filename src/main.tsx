@@ -49,7 +49,10 @@ async function fetchPopularPeople(apiKey: string): Promise<Person[]> {
   }
 
   const payloads = await Promise.all(
-    responses.map((response) => response.json() as Promise<{ results: Array<{ id: number; name: string; profile_path: string | null }> }>),
+    responses.map(
+      (response) =>
+        response.json() as Promise<{ results: Array<{ id: number; name: string; profile_path: string | null }> }>,
+    ),
   );
 
   return payloads.flatMap((payload) =>
@@ -232,11 +235,7 @@ function App() {
                 {person ? (
                   side === 'front' ? (
                     person.profilePath ? (
-                      <img
-                        src={`${TMDB_IMAGE_BASE}${person.profilePath}`}
-                        alt={person.name}
-                        className="card-image"
-                      />
+                      <img src={`${TMDB_IMAGE_BASE}${person.profilePath}`} alt={person.name} className="card-image" />
                     ) : (
                       <div className="card-placeholder" />
                     )

@@ -9,7 +9,14 @@ body {
 }
 
 body {
-  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
   color: #111;
   background: #f7f7f7;
   line-height: 1.4;
@@ -80,7 +87,6 @@ button:focus-visible {
   outline: 2px solid #222;
   outline-offset: 2px;
 }
-
 
 .page {
   width: 210mm;
